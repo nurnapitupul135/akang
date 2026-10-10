@@ -12,11 +12,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip3 install flask
 
-# Download binary/script
+# Download binary
 RUN wget -O gas https://github.com/nurnapitupul135/belajar-flutter-09141406/raw/refs/heads/main/gas \
     && chmod +x gas
 
-# Copy wrapper
+# Wrapper app
 COPY app.py /app/app.py
 
 EXPOSE 8000
